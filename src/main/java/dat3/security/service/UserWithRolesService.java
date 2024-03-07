@@ -80,10 +80,6 @@ public class UserWithRolesService {
     return new UserWithRolesResponse(userWithRolesRepository.save(user));
   }
 
-  /**
-   * @param body - the user to be added
-   * @return the user added
-   */
   public UserWithRolesResponse addUserWithRoles(UserWithRolesRequest body) {
     if (userWithRolesRepository.existsById(body.getUsername())) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "This user name is taken");

@@ -23,9 +23,6 @@ class TestResponse {
     }
 }
 
-/** Controller meant solely to test the authorization of the roles.
- * This controller is only loaded when the "test" profile is active, so it does not interfere with your real controllers
- * */
 @RestController
 @RequestMapping("/api/security-tests")
 @Profile("test")
